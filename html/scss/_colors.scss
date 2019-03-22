@@ -1,0 +1,101 @@
+.colorscheme_main {
+    // Codes generated with coolor.co
+    // https://coolors.co/3498db-000000-000000-000000-000000
+
+    // Codes stuck in variables, for single change flow
+    $cs_main_blue: #3498DB;
+    $cs_main_violet: #694D75;
+    $cs_main_grey: #001021;
+    $cs_main_white: #F6F7EB; // Is that eggshell with romalian type??
+    $cs_main_black: #000000;
+
+    $cs_main_red: #DD7373;
+    $cs_main_yellow: #E8C547;
+    $cs_main_orange: #FFBF69;
+    $cs_main_green: #69995D;
+
+    $cs_main_brown: #C1B098;
+
+    // .{color} is foreground, .bg_{color} is background
+    .red {
+        color:$cs_main_red;
+    }
+    .bg_red {
+        background-color:$cs_main_red;
+    }
+    .blue {
+        color:$cs_main_blue;
+    }
+    .bg_blue {
+        background-color:$cs_main_blue;
+    }
+    .yellow {
+        color:$cs_main_yellow;
+    }
+    .bg_yellow {
+        background-color:$cs_main_yellow;
+    }
+    .orange {
+        color:$cs_main_orange;
+    }
+    .bg_orange {
+        background-color:$cs_main_orange;
+    }
+    .green {
+        color:$cs_main_green;
+    }
+    .bg_green {
+        background-color:$cs_main_green;
+    }
+    .violet {
+        color:$cs_main_violet;
+    }
+    .bg_violet {
+        background-color:$cs_main_violet;
+    }
+    .black {
+        color:$cs_main_black;
+    }
+    .bg_black {
+        background-color:$cs_main_black;
+    }
+    .brown {
+        color:$cs_main_brown;
+    }
+    .bg_brown {
+        background-color:$cs_main_brown;
+    }
+    .grey {
+        color:$cs_main_grey;
+    }
+    .bg_grey {
+        background-color:$cs_main_grey;
+    }
+    .white {
+        color:$cs_main_white;
+    }
+    .bg_white {
+        background-color:$cs_main_white;
+    }
+
+    // Default element coloring
+    .bg {
+        background-color:$cs_main_white;
+    }
+    h1, h2 {
+        color:$cs_main_blue;
+    }
+    h3, h4, h5, h6 {
+        color:$cs_main_blue;
+    }
+    p, span, li {
+        color:$cs_main_grey;
+    }
+    a, a:hover {
+        color:$cs_main_violet;
+    }
+    hr {
+        border-color:$cs_main_black;
+    }
+}
+

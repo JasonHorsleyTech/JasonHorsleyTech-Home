@@ -1,0 +1,97 @@
+/* Imports for everything else */
+/* Vendor, and base html element styles */
+body {
+  font: 100% Helvetica, sans-serif;
+}
+
+.colorscheme_main .red {
+  color: #DD7373;
+}
+.colorscheme_main .bg_red {
+  background-color: #DD7373;
+}
+.colorscheme_main .blue {
+  color: #3498DB;
+}
+.colorscheme_main .bg_blue {
+  background-color: #3498DB;
+}
+.colorscheme_main .yellow {
+  color: #E8C547;
+}
+.colorscheme_main .bg_yellow {
+  background-color: #E8C547;
+}
+.colorscheme_main .orange {
+  color: #FFBF69;
+}
+.colorscheme_main .bg_orange {
+  background-color: #FFBF69;
+}
+.colorscheme_main .green {
+  color: #69995D;
+}
+.colorscheme_main .bg_green {
+  background-color: #69995D;
+}
+.colorscheme_main .violet {
+  color: #694D75;
+}
+.colorscheme_main .bg_violet {
+  background-color: #694D75;
+}
+.colorscheme_main .black {
+  color: #000000;
+}
+.colorscheme_main .bg_black {
+  background-color: #000000;
+}
+.colorscheme_main .brown {
+  color: #C1B098;
+}
+.colorscheme_main .bg_brown {
+  background-color: #C1B098;
+}
+.colorscheme_main .grey {
+  color: #001021;
+}
+.colorscheme_main .bg_grey {
+  background-color: #001021;
+}
+.colorscheme_main .white {
+  color: #F6F7EB;
+}
+.colorscheme_main .bg_white {
+  background-color: #F6F7EB;
+}
+.colorscheme_main .bg {
+  background-color: #F6F7EB;
+}
+.colorscheme_main h1, .colorscheme_main h2 {
+  color: #3498DB;
+}
+.colorscheme_main h3, .colorscheme_main h4, .colorscheme_main h5, .colorscheme_main h6 {
+  color: #3498DB;
+}
+.colorscheme_main p, .colorscheme_main span, .colorscheme_main li {
+  color: #001021;
+}
+.colorscheme_main a, .colorscheme_main a:hover {
+  color: #694D75;
+}
+.colorscheme_main hr {
+  border-color: #000000;
+}
+
+/* Micro layouts */
+/* Hack stacks */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/*# sourceMappingURL=main.css.map */
