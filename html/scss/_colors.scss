@@ -1,21 +1,51 @@
 .colorscheme_main {
     // Codes generated with coolor.co
-    // https://coolors.co/3498db-000000-000000-000000-000000
+    // https://coolors.co/app
 
     // Codes stuck in variables, for single change flow
-    $cs_main_blue: #3498DB;
-    $cs_main_violet: #694D75;
-    $cs_main_grey: #001021;
-    $cs_main_white: #F6F7EB; // Is that eggshell with romalian type??
-    $cs_main_black: #000000;
+    $cs_primary_1: #3498DB;
+    $cs_primary_2: #694D75;
+    $cs_primary_3: #001021;
+    $cs_primary_4: #F6F7EB;
+    $cs_primary_5: #000000;
 
-    $cs_main_red: #DD7373;
-    $cs_main_yellow: #E8C547;
-    $cs_main_orange: #FFBF69;
-    $cs_main_green: #69995D;
+    $cs_secondary_6: #DD7373;
+    $cs_secondary_7: #E8C547;
+    $cs_secondary_8: #FFBF69;
+    $cs_secondary_9: #69995D;
+    $cs_secondary_10: #C1B098;
 
-    $cs_main_brown: #C1B098;
+    // Default element coloring
+    .bg {
+        background-color:#FFFFFF;
+    }
+    h1, h2 {
+        color:$cs_primary_1;
+    }
+    h3, h4, h5, h6 {
+        color:$cs_primary_2;
+    }
+    p, span, li {
+        color:$cs_primary_3;
+    }
+    a, a:hover {
+        color:$cs_primary_4;
+    }
+    hr {
+        border-color:$cs_primary_5;
+    }
 
+    /*
+    .customCollapse {
+        .collapser {
+            
+        }
+        i {
+            color:$cs_main_green;
+        }
+    }
+    */
+    /*
     // .{color} is foreground, .bg_{color} is background
     .red {
         color:$cs_main_red;
@@ -77,25 +107,6 @@
     .bg_white {
         background-color:$cs_main_white;
     }
-
-    // Default element coloring
-    .bg {
-        background-color:$cs_main_white;
-    }
-    h1, h2 {
-        color:$cs_main_blue;
-    }
-    h3, h4, h5, h6 {
-        color:$cs_main_blue;
-    }
-    p, span, li {
-        color:$cs_main_grey;
-    }
-    a, a:hover {
-        color:$cs_main_violet;
-    }
-    hr {
-        border-color:$cs_main_black;
-    }
+    */
 }
 
