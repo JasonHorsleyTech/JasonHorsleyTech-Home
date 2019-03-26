@@ -17,11 +17,6 @@ class Recolor {
         }
     }
 
-//    gen_colors_random() {
-//        let hex = randHexChar() + randHexChar() + randHexChar();
-//        return hex.toUpperCase();
-//    }
-
     // Apply this colorscheme to associated elements
     apply() {
         /* 
@@ -52,30 +47,28 @@ ${this.context} ${tag} {
         this.styleElem = styleElem;
     }
 
-    constructor(context, elemColorAssoc, colors) {
+    constructor(context, colors, elemColorAssoc) {
         let fatal = false;
         try {
-            // I stripped out all the "if nothing make something" default arguments.
-            // I'm also going to move the color generation bits to an extended class
-             
             // Check known bad constructions, toggle fatal if too much to handle.
-            // this.context = (context) ? context.trim() : "body";
-            // this.elemColorAssoc = (elemColorAssoc) ? elemColorAssoc : this.defaultColorAssoc;
-            // Generate random hex values for all 5 colors on page (usually pretty ugly ;))
-            // let defaultColors = Array.from(new Array(5), this.gen_colors_random);
-
-            // Generate ONE random color, then 4 similar to it (looking better)
-            // let defaultColors = this.gen_colors_from_seed("3498DB");
-            // this.colors = (colors && colors.length === 5) ? colors : defaultColors;
-
-
-            this.context = context;
-            this.elemColorAssoc = elemColorAssoc;
+            this.context = (context) ? context.trim() : "body";
             this.colors = colors;
+            // Arg3 optional (too long to keep typing)
+            this.elemColorAssoc = (elemColorAssoc) ? elemColorAssoc : this.defaultColorAssoc;
 
             // Test that the passed context is a DOM element
             if (!(document.querySelector(this.context).nodeType === 1)) {
                 throw {code: 1, obj: context, fatal: true};
+            }
+            // Test that all color codes are in fact decent hex values
+            // regex for is between 000000 and FFFFFF
+            let regexHexTest = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
+            // Map that to the 5 codes in the passed color arr
+            let hexCheck = this.colors.map(hex => regexHexTest.test(hex));
+            // Reduce the 5 pass/fails to a single must_be_all_true boolean
+            let allHex = hexCheck.reduce((acc, val) => acc && val);
+            if (!(this.colors.length === 5 && allHex)) {
+                throw {code: 2, fatal: true, obj: this.colors};
             }
 
             // Test that the passed elemColoAssoc has at least the basics
@@ -85,19 +78,9 @@ ${this.context} ${tag} {
                 return ([0, 1, 2, 3, 4].indexOf(this.elemColorAssoc[elem]) === -1)
             });
             if (missingAssocs.length) {
-                throw {code: 2, fatal: true, obj: missingAssocs};
+                throw {code: 3, fatal: true, obj: missingAssocs};
             }
 
-            // Test that all color codes are in fact decent hex values
-            // regex for is between 000000 and FFFFFF
-            let regexHexTest = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
-            // Map that to the 5 codes in the passed color arr
-            let hexCheck = this.colors.map(hex => regexHexTest.test(hex));
-            // Reduce the 5 pass/fails to a single must_be_all_true boolean
-            let allHex = hexCheck.reduce((acc, val) => acc && val);
-            if (!(this.colors.length === 5 && allHex)) {
-                throw {code: 3, fatal: true, obj: this.colors};
-            }
         } catch (err) {
             switch (err.code) {
                 case 1:
@@ -105,11 +88,11 @@ ${this.context} ${tag} {
                     console.error(err.obj);
                     break;
                 case 2:
-                    console.error("Error: Arg2 is missing color code associations for the following basic HTML elements");
+                    console.error("Error: Arg2 has non-hex values");
                     console.error(err.obj.join(", "));
                     break;
                 case 3:
-                    console.error("Error: Arg3 has non-hex values");
+                    console.error("Error: Arg3 is missing color code associations for the following basic HTML elements");
                     console.error(err.obj);
                 default:
                     fatal = true;
@@ -124,19 +107,19 @@ ${this.context} ${tag} {
             if (fatal) {
                 let exArg1 = "#main";
                 let exArg2 = JSON.stringify(this.defaultColorAssoc);
-                let exArg3 = JSON.stringify("3498DB", "000000", "000000", "000000", "FFFFFF");
+                let exArg3 = JSON.stringify("3498DB", "000000", "000000", "000000",
+                        "FFFFFF");
                 console.info(`Usage: 
 new Recolor(
     // A queryable string like "body" or ".container"
     "${exArg1}", 
-    // Element - Array index associative object
-    ${exArg2}, 
     // 5 item array of HEX color codes
+    ${exArg2}, 
+    // Element - Array index associative object
     ${exArg3}
 )`);
             }
         }
-
         if (!fatal) {
             this.apply();
         }
@@ -144,27 +127,8 @@ new Recolor(
 }
 
 class Recolor_from_seed extends Recolor {
-    constructor(context, elemColorAssoc, seed) {
+    constructor(context, seed, elemColorAssoc) {
         let colors = new Color_generator_five_from_seed(seed);
-        super(context, elemColorAssoc, colors);
+        super(context, colors, elemColorAssoc);
     }
 }
-let genColorFromSeed = function () {
-    /*
-     Looking at movie posters, the blue orange ones
-     Noticing the blue is usually close to      0,      140,    255
-     and the orange is usually close to         255,    140,    0
-     
-     So if I'm trying to make a complementary color from a seed, I should keep ONE value the same, and TWO values polar opposites.
-     */
-
-    // Move to RGB, easier for my ape brain to deal with...
-    let justSeed = (seed.charAt(0) === "#") ? seed.substring(1, 7) : seed;
-    // Probably a shorter, but leave the golf for after hours.
-    let hexByColor = [
-        justSeed.substring(0, 2),
-        justSeed.substring(2, 4),
-        justSeed.substring(4, 6),
-    ];
-    let rgb = hexByColor.map(cc => parseInt(cc, 16));
-};
