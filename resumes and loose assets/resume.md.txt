@@ -1,0 +1,72 @@
+# SOFTWARE ENGINEER
+
+Name:   Jason Horsley
+Email:  Jason@JasonHorsley.tech
+Phone:  804-507-3559
+Addr:   5557 Dunloe Drive, Apt 104, 
+        Virginia Beach VA 23455
+
+* Principle software developer for winning entry in Global Learning Xprize.
+* 6 years direct full stack experience.
+* Able to take vague uncertain needs and create working solutions.
+
+## SKILLS
+
+### LANGUAGES
+
+* HTML  HAML
+* CSS   SCSS
+* JS    ES6
+* PHP   Python
+* MySQL
+* LiveCode
+
+### LIBRARIES
+
+* jQuery
+* BootStrap
+* Angular
+* Webix
+* Cordova
+
+### TOOLS
+
+* AWS
+* ShellScript and Bash
+* Apache
+* Linux OS
+* Git
+* Asana
+
+## EXPERIENCE
+
+### Game maker 2011 - 2012
+
+GameChange5
+
+Ported old Flash games to HTML5 using Construct2 for a McGraw Hill project.
+
+### Software Developer 2012 - 2014
+
+CCI NY
+
+Developed small scale software solutions for CCI, including batch SCORM content conversion, Javascript plugins, and a custom issue reporting server solution.
+
+### Principle Software Developer 2014 - Present
+
+Pubbly
+
+Created Pubbly, a finalist in the Global Learning Xprize, consisting of cross platform desktop design tools and a full LAMP stack CMS which produced an android application to teach rural Tanzania villages children how to read and write Swahili. Grand prize winners to be announced next month, all relevant code to be open sourced.
+
+## INTERESTS
+
+As I am married and wanting to start a family, I am primarily interested in a career which affords both long term stability and opportunity to further my skill set. I am especially interested in machine learning, front end heavy web application frameworks, and quality relational database design.
+
+I also enjoy playing church organ.
+
+## REFERENCES
+
+* Susan Darwin: Head of design for Pubbly
+    Susan@Pubbly.com
+* Josh Powe: CEO of LinkIt and Pubbly
+    Josh@Pubbly.com

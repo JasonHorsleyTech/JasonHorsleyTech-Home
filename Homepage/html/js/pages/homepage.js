@@ -4,7 +4,7 @@ $(document).ready(function () {
      "body",
      ["3498DB", "694D75", "001021", "000000", "F6F7EB"]);
      */
-    new Recolor_from_seed("body");
+    new Recolor("body", ["3498DB", "694D75", "001021", "000000", "F6F7EB"]);
 });
 
 $(document).ready(function () {

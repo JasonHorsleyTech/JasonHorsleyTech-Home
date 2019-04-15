@@ -93,9 +93,37 @@
   border-color: #000000;
 }
 
+.transformCenterCont {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.transformCenterCont .transformCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flexCenterCont {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.flexCenterCont .flexCenter {
+  flex: none;
+}
+
 /* Vendor, and base html element styles */
 body {
   font: 100% Helvetica, sans-serif;
+}
+
+.spacer {
+  width: 100%;
+  height: 25px;
 }
 
 /* Micro layouts */
@@ -106,23 +134,27 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
 
 */
 .customCollapse {
-  height: 35px;
-  width: 135px;
+  min-width: 135px;
+  margin: 8px;
 }
 .customCollapse .collapser {
+  display: inline-block;
   border: 1px solid black;
   text-align: center;
+  margin-bottom: 15px;
   /*
-      I want the plus/minus and title to the vertically centered in div AS WELL as vertically centered with eachother... Rather than coming up with some multi div table solution, so that the span and icon can be height changed responsively, I'll just fix height and manually calculate padding... I'm not a finiky designer, I'll  stick with the height...
-  */
+          I want the plus/minus and title to the vertically centered in div AS WELL as vertically centered with eachother... Rather than coming up with some multi div table solution, so that the span and icon can be height changed responsively, I'll just fix height and manually calculate padding... I'm not a finiky designer, I'll  stick with the height...
+      */
   padding: 7.5px;
 }
 .customCollapse .collapser:hover {
   text-decoration: none;
 }
-.customCollapse .collapser span, .customCollapse .collapser i {
+.customCollapse .collapser .title,
+.customCollapse .collapser i {
   display: inline-block;
   vertical-align: middle;
+  margin: 0;
 }
 .customCollapse .collapser i {
   /* Default none, so I don't have to double declare "hidden" with i.showOnCollapsed AND i.showOnExpanded */
@@ -185,7 +217,7 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
   clear: both;
 }
 #colorPicker .track {
-  background: #EFEFEF url(../assets/tinycolorpicker.png) no-repeat 50% 50%;
+  background: #efefef url(../assets/tinycolorpicker.png) no-repeat 50% 50%;
   height: 150px;
   width: 150px;
   position: absolute;
@@ -220,6 +252,32 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
 #colorPicker .dropdown li {
   height: 25px;
   cursor: pointer;
+}
+
+/*
+    Single class elements. One offs
+    */
+.transformCenterCont {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.transformCenterCont .transformCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.halfhr {
+  width: 50%;
+  margin: 25px 25% 25px;
+  border-bottom: 1px solid black;
+}
+
+.porthole {
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 /* Hack stacks */

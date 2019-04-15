@@ -1,0 +1,306 @@
+<html>
+
+<head>
+    <title>Jason Horsley Tech</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo/flag.ico" />
+    <!-- GLOBAL page includes -->
+    <!-- Third party -->
+    <!-- 
+            Font Awesome 5.4.1+
+            https://fontawesome.com/license/free
+        -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
+    <!-- 
+            jQuery  3.3.1+
+            https://jquery.org/license/
+        -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!--
+            Popper 1.12.9+
+            https://github.com/FezVrasta/popper.js/blob/master/LICENSE.md
+        -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!-- 
+            BootStrap
+            https://getbootstrap.com/docs/4.0/about/license/
+        -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--
+            TinyColorPicker
+            https://github.com/wieringen/tinycolorpicker/blob/master/MIT-LICENSE.txt
+        -->
+    <script type="text/javascript" src="js/third_party/tinycolorpicker.js"></script>
+
+    <!--
+            LiveJS 4
+            http://livejs.com/license.txt
+        -->
+    <script src="http://livejs.com/live.js"></script>
+    <!-- ME party -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- I'm bad a colorschemes, so I'll just let my wife randomize until it looks OK -->
+    <script src="js/classes/recolor.js"></script>
+
+    <!-- Just for fun, want to have a "choose your own primary and I'll make it look good" widget to the site -->
+    <script src="js/classes/color_generator.js"></script>
+
+    <!-- Add/remove the .open/.closed class on #{target} elem when a .css-toggle element is clicked -->
+    <script src="js/modules/css_toggles.js"></script>
+
+    <!-- PAGE specific includes -->
+    <script src="js/pages/homepage.js"></script>
+</head>
+
+<body class="colorscheme_main">
+    <!--
+        In order to color the background without putting the colorscheme_main class on the body itself (style in _base.scss, just an abs stretched at 100%)
+        -->
+    <div class="bg"></div>
+
+    <div class="container">
+        <div style="height:50px"></div>
+
+        <h1>Software Developer</h1>
+
+        <!-- Pull out tab with all sorts of "Look at my fancy JS footwork" buttons -->
+        <div id="underTheHood" class="open">
+            <a class="d-none ui-opener css-toggle" target="underTheHood">
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="ui-bar">
+                <div id="colorPicker">
+                    <a class="color">
+                        <i class="colorInner fas fa-palette"></i>
+                    </a>
+                    <div class="track"></div>
+                    <ul class="dropdown">
+                        <li></li>
+                    </ul>
+                    <input type="hidden" class="colorInput" />
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-6 col-md-8 col-lg-9 col-xl-10">
+                <h2>Hi, </h2>
+                <p>My name is Jason Horsley. I am currently based in Virginia Beach. I enjoy building clean function web
+                    applications. I have 6 years experience as a professional full stack developer.</p>
+                <p>I have been the
+                    software lead for Pubbly in the ongoing 4 year Global Learning Xprize, which is set to finish this
+                    May 15th, and I am looking forward to my next opprotunity.</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="porthole">
+                    <img src="assets/headshot.jpg" style="width:100%;" />
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Languages</h2>
+        <div class="row pt-1 m-auto text-center">
+            <div class="col col-4">
+                <p>HTML and HAML</p>
+                <p>CSS and SCSS</p>
+                <p>JS and ES6</p>
+                <p>PHP and Python</p>
+                <p>MySQL</p>
+                <p>LiveCode</p>
+            </div>
+            <div class="col col-4">
+                <p>Angular</p>
+                <p>BootStrap</p>
+                <p>Cordova</p>
+                <p>jQuery</p>
+                <p>Webix</p>
+            </div>
+            <div class="col col-4">
+                <p>AWS</p>
+                <p>ShellScript and Bash</p>
+                <p>Apache 2</p>
+                <p>Linux OS</p>
+                <p>Git</p>
+                <p>Asana</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Experience</h2>
+        <div class="container">
+            <h4>GameChange5, Junior Developer</h4>
+            <p>Ported old Flash games to HTML5 using Construct2 for a McGraw Hill project.</p>
+            <p>2011 - 2012</p>
+        </div>
+        <div class="container">
+            <h4>CCINY, Software Developer</h4>
+            <p>Developed small scale software solutions for CCI, including batch SCORM content conversion, Javascript
+                plugins, and a custom issue reporting server solution.</p>
+            <p>2012 - 2014</p>
+        </div>
+        <div class="container">
+            <h4>Pubbly, CTO</h4>
+            <p>Created Pubbly, one of five remaining finalists in the
+                <a href='https://www.xprize.org/prizes/global-learning/teams/cci'>Global Learning Xprize.</a> The GL
+                Xprize is an ongoing 15 million dollar charity project to create
+                Android applications to teach children in impoverished foreign countries how to read and write in their
+                own native language.</p>
+            <p>Our submission consists of a Windows/Mac native application, an XML structured Javascript runtime
+                environment, a
+                LAMP CMS, and a Cordova built android APK ultimately delivered to Tanzania as TWRP system images</p>
+            <p>As the CTO of this small startup, I wrote the majority of the code and made all relevant software
+                decisions. For full instructions on how to use all the open sourced tools, please visit the Pubbly
+                Development github business account.</p>
+            <p>2014 - present</p>
+        </div>
+
+        <h2>Code samples</h2>
+        <div class="container">
+            <p>The following are projects I feel best reflect my abilities as a developer.</p>
+            <!-- Using bootstrap for class based collapsed, but will make new style for toggle button -->
+            <h4>Professional</h4>
+
+            <h6>Pubbly Engine</h6>
+            <p>
+                The Pubbly runtime engine is a vanilla Javascript project which takes XML generated from
+                desktop design tools and creates an interactive web based experience.
+            </p>
+            <a href='https://github.com/PubblyDevelopment/pubbly_engine'>Source code</a>
+            </br>
+            <a href='sample/pubbly_engine'>Working example</a>
+
+            <div class="spacer"></div>
+
+            <h6>Pubbly Console</h6>
+            <p>
+                The Pubbly console is a custom CMS designed to mass produce content used in the Xprize submission.
+                It was built as a LAMP stack, leaning heavily on the Webix UI front end framework.
+            </p>
+            <a href='https://github.com/PubblyDevelopment/pubbly_console'>Source code</a>
+            </br>
+            <a href='http://sandbox.pubbly.com/register.php'>Sandbox console, all content deleted weekly</a>
+
+            <div class="halfhr"></div>
+            <h4>Personal</h4>
+
+            <h6>Playground</h6>
+            <p>
+                Collection of >1hr practice problems I regularly update to keep my skills sharp. Access structure is
+                Angular, but most of the individual projects are Javascript.
+            </p>
+            <a href='https://github.com/PubblyDevelopment/JasonHorsleyTech-Playground'>Source code</a>
+            </br>
+            <a href="playground">JasonHorsley.tech/playground</a>
+
+            <div class="spacer"></div>
+
+            <h6>This website</h6>
+            <p>
+                Also simple, I am somewhat proud of it. It's
+            </p>
+            <a href="https://github.com/JasonHorsleyTech/JasonHorsleyTech-Home/blob/master/html/index.html">Clean
+                HTML</a>
+            </br>
+            <a href="https://github.com/JasonHorsleyTech/JasonHorsleyTech-Home/tree/master/html/scss">Sensible SCSS
+                styles</a>
+            <span>and an</span>
+            </br>
+            <a href="https://github.com/JasonHorsleyTech/JasonHorsleyTech-Home/blob/master/html/js/pages/homepage.js">Overly
+                complicated reactive color scheme.</a>
+
+            <div class="spacer"></div>
+
+            <h6>Easy Reader (in planning)</h6>
+            <p>
+                An idea I've had for some time. First stage is a suped up reader, which color codes qutoes to the
+                speaker,
+                so readers won't lose track of who says what when. I have plans to build it out into a UI where users
+                could make their own "easy-read" brand content from copyright free materials, but this project may stay
+                in the garage for a while.
+            </p>
+            <a href='https://github.com/JasonHorsleyTech/easy-reader/tree/master/notes'>Source notes...</a>
+            <!--
+            <div class="customCollapse">
+                <a class="collapser" data-toggle="collapse" href="#professionalProjects" aria-expanded="false">
+                    <i class="fas fa-plus-circle showOnCollapsed"></i>
+                    <i class="fas fa-minus-circle showOnExpanded"></i>
+                    <h4 class="title">Pubbly Engine</h4>
+                </a>
+                <div id="professionalProjects" class="collapse">
+                    <h6>Pubbly Engine</h6>
+
+                    <br>
+                </div>
+            </div>
+            -->
+        </div>
+
+        <hr>
+
+        <h2>Interests</h2>
+        <div class="container">
+            <p>As I am married and wanting to start a family, I am primarily interested in a career which affords both
+                long term stability and opportunity to further my skill set. I am especially interested in machine
+                learning, front end heavy web application frameworks, and quality relational database design.</p>
+            <p>I am fluent in Spanish, I play church organ, and am happy to relocate.</p>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-6">
+                <h2>Contact</h2>
+                <div class="ml-4">
+                    <p class="mb-1">
+                        <span>Name:</span>
+                        <span>Jason Horsley</span>
+                    </p>
+                    <p class="mb-1">
+                        <span>Git:</span>
+                        <span><a href="https://github.com/JasonHorsleyTech">JasonHorsleyTech</a></span>
+                    </p>
+                    <p class="mb-1">
+                        <span>Email:</span>
+                        <span><a href="mailto:Jason@JasonHorsley.tech">Jason@JasonHorsley.tech</a></span>
+                    </p>
+                    <p class="mb-1">
+                        <span>Phone:</span>
+                        <span>804-507-3559</span>
+                    </p>
+                    <p class="mb-1">
+                        <span>Addr:</span>
+                        <span>5557 Dunloe Drive, Apt 104</span>
+                    </p>
+                    <p class="mb-1">
+                        <span class="invisible">Addr:</span>
+                        <span>Virginia Beach, VA. 23455</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <h2>References</h2>
+                <div class="ml-4">
+                    <p>
+                        <span>Head Design:</span>
+                        <span><a href="mailto:Susan@Pubbly.com">Susan Darwin</a></span>
+                    </p>
+                    <p>
+                        <span>CEO:</span>
+                        <span><a href="mailto:Josh@Pubbly.com">Josh Powe</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+</body>
+
+</html>
