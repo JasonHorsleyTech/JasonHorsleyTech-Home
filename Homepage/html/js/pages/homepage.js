@@ -12,6 +12,8 @@ $(document).ready(function () {
     $box.tinycolorpicker();
     $box.bind("change", function (obj, hex, rgb)
     {
+        console.log("Just a dumb idea... Automatically recolor the website based on generated complementary colors");
+        // -- js/classes/recolor.js
         let recolor = new Recolor_from_seed(
                 "body",
                 hex);

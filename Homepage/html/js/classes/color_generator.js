@@ -96,7 +96,7 @@ class Color_generator_five_from_seed extends Color_generator {
         let spread = [base, base, base];
         spread[0] = this.lightModRGB(spread[0], 0.8);
         spread[2] = this.lightModRGB(spread[2], 1.2);
-        console.log(spread);
+        // console.log(spread);
         return spread;
     }
     constructor(seed, returnType) {

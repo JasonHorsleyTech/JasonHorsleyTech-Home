@@ -1,4 +1,8 @@
 <html>
+<!--
+    Source code for this website available on GitHub: 
+    https://github.com/JasonHorsleyTech/JasonHorsleyTech-Home/tree/master/Homepage
+-->
 
 <head>
     <title>Jason Horsley Tech</title>
@@ -53,12 +57,19 @@
 
     <!-- PAGE specific includes -->
     <script src="js/pages/homepage.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            console.log("Source code for this website available at GitHub: ");
+            console.log("https://github.com/JasonHorsleyTech/JasonHorsleyTech-Home/tree/master/Homepage");
+        });
+    </script>
 </head>
 
 <body class="colorscheme_main">
     <!--
         In order to color the background without putting the colorscheme_main class on the body itself (style in _base.scss, just an abs stretched at 100%)
-        -->
+    -->
     <div class="bg"></div>
 
     <div class="container">
@@ -91,10 +102,10 @@
             <div class="col-6 col-md-8 col-lg-9 col-xl-10">
                 <h2>Hi, </h2>
                 <p>My name is Jason Horsley. I am currently based in Virginia Beach. I enjoy building clean function web
-                    applications. I have 6 years experience as a professional full stack developer.</p>
+                    applications. I have 7 years experience as a professional full stack developer.</p>
                 <p>I have been the
                     software lead for Pubbly in the ongoing 4 year Global Learning Xprize, which is set to finish this
-                    May 15th, and I am looking forward to my next opprotunity.</p>
+                    May 15th, and I am looking forward to my next opportunity.</p>
             </div>
             <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                 <div class="porthole">
@@ -114,6 +125,7 @@
                 <p>PHP and Python</p>
                 <p>MySQL</p>
                 <p>LiveCode</p>
+                <p>R</p>
             </div>
             <div class="col col-4">
                 <p>Angular</p>
@@ -121,6 +133,8 @@
                 <p>Cordova</p>
                 <p>jQuery</p>
                 <p>Webix</p>
+                <p>NodeJS</p>
+                <p>Grunt</p>
             </div>
             <div class="col col-4">
                 <p>AWS</p>
@@ -129,6 +143,7 @@
                 <p>Linux OS</p>
                 <p>Git</p>
                 <p>Asana</p>
+                <p>Services<br>(G-Suite, PostMark, PayPal, ect)</p>
             </div>
         </div>
 
@@ -162,11 +177,11 @@
             <p>2014 - present</p>
         </div>
 
-        <h2>Code samples</h2>
+        <h2>Professional samples</h2>
         <div class="container">
             <p>The following are projects I feel best reflect my abilities as a developer.</p>
             <!-- Using bootstrap for class based collapsed, but will make new style for toggle button -->
-            <h4>Professional</h4>
+            <!-- <h4>Professional</h4> -->
 
             <h6>Pubbly Engine</h6>
             <p>
@@ -175,7 +190,7 @@
             </p>
             <a href='https://github.com/PubblyDevelopment/pubbly_engine'>Source code</a>
             </br>
-            <a href='sample/pubbly_engine'>Working example</a>
+            <a href='https://pubbly.com/read.php?n=The%20Fourth%20Little%20Pig'>Working example</a>
 
             <div class="spacer"></div>
 
@@ -188,7 +203,23 @@
             </br>
             <a href='http://sandbox.pubbly.com/register.php'>Sandbox console, all content deleted weekly</a>
 
-            <div class="halfhr"></div>
+            <div class="spacer"></div>
+
+            <h6>Pubbly Marketplace</h6>
+            <p>
+                The Pubbly Marketplace is a secondary monitization plan of the Pubbly source code. The content on the
+                site was created with the open sourced tool set, but the site itself is proprietary.
+            </p>
+            <p>
+                The website is in a closed beta state as CCI awaits the results of the Xprize, but we do have all
+                payment gateways setup through PayPal. You can preview the full system by registering with the promo
+                code of "midas".
+            </p>
+            <a href='https://pubbly.com/account_register.php?promo=midas'>Live site (promo code)</a>
+            <!-- </br>
+            <a href='http://pubbly.com'>MySQL DB design</a> -->
+
+            <!-- <div class="halfhr"></div>
             <h4>Personal</h4>
 
             <h6>Playground</h6>
@@ -226,7 +257,7 @@
                 could make their own "easy-read" brand content from copyright free materials, but this project may stay
                 in the garage for a while.
             </p>
-            <a href='https://github.com/JasonHorsleyTech/easy-reader/tree/master/notes'>Source notes...</a>
+            <a href='https://github.com/JasonHorsleyTech/easy-reader/tree/master/notes'>Source notes...</a> -->
             <!--
             <div class="customCollapse">
                 <a class="collapser" data-toggle="collapse" href="#professionalProjects" aria-expanded="false">
@@ -289,12 +320,16 @@
                 <h2>References</h2>
                 <div class="ml-4">
                     <p>
-                        <span>Head Design:</span>
-                        <span><a href="mailto:Susan@Pubbly.com">Susan Darwin</a></span>
+                        <span>CEO:</span>
+                        <span><a>Josh Powe</a></span>
                     </p>
                     <p>
-                        <span>CEO:</span>
-                        <span><a href="mailto:Josh@Pubbly.com">Josh Powe</a></span>
+                        <span>Head Design:</span>
+                        <span><a>Susan Darwin</a></span>
+                    </p>
+                    <p>
+                        <span>Junior Developer:</span>
+                        <span><a>Wallis Muraca</a></span>
                     </p>
                 </div>
             </div>
