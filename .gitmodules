@@ -1,0 +1,3 @@
+[submodule "Katas"]
+	path = Katas
+	url = https://github.com/JasonHorsleyTech/Katas
