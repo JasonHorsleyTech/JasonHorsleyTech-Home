@@ -1,0 +1,63 @@
+@-webkit-keyframes hori-wipe-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hori-wipe-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.logo * {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: unset;
+}
+
+.logo .name {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.logo .name > * {
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.logo .name .wipe_cover {
+  overflow: hidden;
+  height: 100%;
+  width: 0%;
+  -webkit-animation-name: hori-wipe-in;
+          animation-name: hori-wipe-in;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+/*# sourceMappingURL=logo.css.map */

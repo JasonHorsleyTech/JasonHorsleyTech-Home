@@ -12,30 +12,30 @@
     <!-- GLOBAL page includes -->
     <!-- Third party -->
     <!-- 
-            Font Awesome 5.4.1+
-            https://fontawesome.com/license/free
-        -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
+        Font Awesome 5.8.2+
+        https://fontawesome.com/license/free
+    -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
     <!-- 
-            jQuery  3.3.1+
-            https://jquery.org/license/
-        -->
+        jQuery  3.3.1+
+        https://jquery.org/license/
+    -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <!--
-            Popper 1.12.9+
-            https://github.com/FezVrasta/popper.js/blob/master/LICENSE.md
-        -->
+        Popper 1.12.9+
+        https://github.com/FezVrasta/popper.js/blob/master/LICENSE.md
+    -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <!-- 
-            BootStrap
-            https://getbootstrap.com/docs/4.0/about/license/
-        -->
+        BootStrap
+        https://getbootstrap.com/docs/4.0/about/license/
+    -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!--
-            TinyColorPicker
-            https://github.com/wieringen/tinycolorpicker/blob/master/MIT-LICENSE.txt
-        -->
+        TinyColorPicker
+        https://github.com/wieringen/tinycolorpicker/blob/master/MIT-LICENSE.txt
+    -->
     <script type="text/javascript" src="js/third_party/tinycolorpicker.js"></script>
 
     <!--
@@ -45,6 +45,11 @@
     <script src="http://livejs.com/live.js"></script>
     <!-- ME party -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Coin flip animation on roll over -->
+    <link rel="stylesheet" href="css/flip.css" />
+    <!-- JH and stars logo -->
+    <link rel="stylesheet" href="css/logo.css" />
+
 
     <!-- I'm bad a colorschemes, so I'll just let my wife randomize until it looks OK -->
     <script src="js/classes/recolor.js"></script>
@@ -71,14 +76,57 @@
         In order to color the background without putting the colorscheme_main class on the body itself (style in _base.scss, just an abs stretched at 100%)
     -->
     <div class="bg"></div>
-
     <div class="container">
         <div style="height:50px"></div>
+        <div class="row">
+            <div class="col col-12 col-md-9 col-lg-6">
+                <style>
+                    /* For the flip thing */
+                    .flip-cont,
+                    .flip-front,
+                    .flip-back {
+                        height: 75px;
+                        width: 75px;
+                    }
 
-        <h1>Software Developer</h1>
+                    .fa-centerer:before {
+                        content: '';
+                        height: 100%;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    .fa-center {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                </style>
+                <div class="flip-cont d-inline-block">
+                    <div class="flip-flipper">
+                        <div class="logo flip-front">
+                            <div class="name">
+                                <img class="_letters" src="assets/logo/_letters.png" />
+                                <div class="wipe_cover">
+                                    <img class="_flag" src="assets/logo/_flag.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <a class="home flip-back" href="index.html">
+                            <img style="width:60%;height:60%;margin:20%" src="assets/drawing.svg" />
+                        </a>
+                    </div>
+                </div>
+                <h1 style="margin-left:15px; transform: translateY(-50%)" class="d-inline-block">Software Developer
+                </h1>
+            </div>
+            <div class="col col-12 col-md-3 col-lg-6">
+                <!-- Projects, Katas here-->
+            </div>
+        </div>
+
 
         <!-- Pull out tab with all sorts of "Look at my fancy JS footwork" buttons -->
-        <div id="underTheHood" class="open">
+        <!-- <div id="underTheHood" class="open">
             <a class="d-none ui-opener css-toggle" target="underTheHood">
                 <i class="fas fa-arrow-right"></i>
             </a>
@@ -94,29 +142,33 @@
                     <input type="hidden" class="colorInput" />
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <hr>
 
         <div class="row">
             <div class="col-6 col-md-8 col-lg-9 col-xl-10">
                 <h2>Hi, </h2>
-                <p>My name is Jason Horsley. I am currently based in Virginia Beach. I enjoy building clean function web
-                    applications. I have 7 years professional experience as a full stack web developer, and am most
-                    comfortable with Javascript and PHP.</p>
-                <p>I am the CTO for Pubbly in the ongoing 4 year Global Learning Xprize, which recently ended May 15th,
-                    and I am looking for my next big opportunity.</p>
+                <div class="container">
+                    <p>My name is Jason Horsley. I am currently based in Virginia Beach. I enjoy building clean function
+                        web
+                        applications. I have 7 years professional experience as a full stack web developer, and am most
+                        comfortable with Javascript and PHP.</p>
+                    <p>I am the CTO for Pubbly in the ongoing 4 year Global Learning Xprize, which recently ended May
+                        15th,
+                        and I am looking for my next big opportunity.</p>
+                </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3 col-xl-2">
                 <div class="porthole">
-                    <img src="assets/headshot.jpg" style="width:100%;" />
+                    <img src="assets/headshot2.jpg" style="width:100%;" />
                 </div>
             </div>
         </div>
 
         <hr>
 
-        <h2>Languages</h2>
+        <h2>Skills</h2>
         <div class="row pt-1 m-auto text-center">
             <div class="col col-4">
                 <p>HTML and HAML</p>
@@ -181,9 +233,31 @@
             <p>2014 - present</p>
         </div>
 
-        <h2>Professional samples</h2>
+        <!-- <h2>Skill specific samples</h2>
         <div class="container">
-            <p>The following are projects I feel best reflect my abilities as a developer.</p>
+            <p>The following are snippets I feel best reflect my abilities as a versitile developer.</p>
+            <h6>Database design: Pubbly Market</h6>
+            <div class="row">
+                <p class="col col-3">
+                    The Pubbly Marketplace is a full stack LAMP project which allows the sale of custom interactive
+                    books.
+                    The site is a bootstrap frontend, a custom PHP framework backend, and a database. All code is
+                    proprietary, however I can show off the Workbench documents, which I believe reflect my skills as
+                    MySQL database designer.
+                </p>
+                <div class="col col-9">
+                    <a href="projects/pubbly_market">
+                        <img class="w-100" src="assets/pubbly_market_full.png" />
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <hr>
+
+        <h2>Professional projects</h2>
+        <div class="container">
+            <p>The following are the professional projects I am able to show off.</p>
             <!-- Using bootstrap for class based collapsed, but will make new style for toggle button -->
             <!-- <h4>Professional</h4> -->
 
@@ -219,62 +293,6 @@
                 "GoPubbly".
             </p>
             <a href='https://pubbly.com/account_register.php?promo=GoPubbly'>Live site (promo code)</a>
-            <!-- </br>
-            <a href='http://pubbly.com'>MySQL DB design</a> -->
-
-            <!-- <div class="halfhr"></div>
-            <h4>Personal</h4>
-
-            <h6>Playground</h6>
-            <p>
-                Collection of >1hr practice problems I regularly update to keep my skills sharp. Access structure is
-                Angular, but most of the individual projects are Javascript.
-            </p>
-            <a href='https://github.com/PubblyDevelopment/JasonHorsleyTech-Playground'>Source code</a>
-            </br>
-            <a href="playground">JasonHorsley.tech/playground</a>
-
-            <div class="spacer"></div>
-
-            <h6>This website</h6>
-            <p>
-                Also simple, I am somewhat proud of it. It's
-            </p>
-            <a href="https://github.com/JasonHorsleyTech/JasonHorsleyTech-Home/blob/master/html/index.html">Clean
-                HTML</a>
-            </br>
-            <a href="https://github.com/JasonHorsleyTech/JasonHorsleyTech-Home/tree/master/html/scss">Sensible SCSS
-                styles</a>
-            <span>and an</span>
-            </br>
-            <a href="https://github.com/JasonHorsleyTech/JasonHorsleyTech-Home/blob/master/html/js/pages/homepage.js">Overly
-                complicated reactive color scheme.</a>
-
-            <div class="spacer"></div>
-
-            <h6>Easy Reader (in planning)</h6>
-            <p>
-                An idea I've had for some time. First stage is a suped up reader, which color codes qutoes to the
-                speaker,
-                so readers won't lose track of who says what when. I have plans to build it out into a UI where users
-                could make their own "easy-read" brand content from copyright free materials, but this project may stay
-                in the garage for a while.
-            </p>
-            <a href='https://github.com/JasonHorsleyTech/easy-reader/tree/master/notes'>Source notes...</a> -->
-            <!--
-            <div class="customCollapse">
-                <a class="collapser" data-toggle="collapse" href="#professionalProjects" aria-expanded="false">
-                    <i class="fas fa-plus-circle showOnCollapsed"></i>
-                    <i class="fas fa-minus-circle showOnExpanded"></i>
-                    <h4 class="title">Pubbly Engine</h4>
-                </a>
-                <div id="professionalProjects" class="collapse">
-                    <h6>Pubbly Engine</h6>
-
-                    <br>
-                </div>
-            </div>
-            -->
         </div>
 
         <hr>
@@ -323,15 +341,15 @@
                 <h2>References</h2>
                 <div class="ml-4">
                     <p>
-                        <span>CEO:</span>
+                        <span>CCI CEO:</span>
                         <span><a>Josh Powe</a></span>
                     </p>
                     <p>
-                        <span>Creative Director:</span>
+                        <span>Pubbly Creative Director:</span>
                         <span><a>Susan Darwin</a></span>
                     </p>
                     <p>
-                        <span>Junior Developer:</span>
+                        <span>Pubbly Junior Developer:</span>
                         <span><a>Wallis Muraca</a></span>
                     </p>
                 </div>

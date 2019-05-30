@@ -1,0 +1,42 @@
+.flip-cont {
+  perspective: 1000px;
+  .flip-flipper {
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  &:hover .flip-flipper {
+    transform: rotateY(180deg);
+    cursor: hand;
+  }
+  .flip-front,
+  .flip-back {
+    backface-visibility: hidden;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .flip-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  .flip-back {
+    transform: rotateY(180deg);
+  }
+}
+
+/*
+REQUIRED, but I like it inline, for tweak tweaks
+.flip-cont,
+.front,
+.back {
+    height: 75px;
+    width: 75px;
+}
+.front,
+.back {
+    border-radius:50%;
+    background-color: #3498db;
+}
+*/

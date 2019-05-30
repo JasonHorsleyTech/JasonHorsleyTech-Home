@@ -32,6 +32,8 @@ class Recolor {
         styleElem.innerHTML = "/* Style generated and appended from recolor.js */";
         let colorNames = {
             ".bg": "background-color",
+            ".flip-front": "background-color",
+            ".flip-back": "background-color",
         }
         for (let tag in this.elemColorAssoc) {
             let hex = this.colors[this.elemColorAssoc[tag]];
@@ -43,6 +45,7 @@ ${this.context} ${tag} {
     ${propName}:#${hex}!important;
     border-color:#${hex}!important;
 }`;
+            console.log(tag + '-' + propName);
         }
         this.styleElem = styleElem;
     }
@@ -58,7 +61,7 @@ ${this.context} ${tag} {
 
             // Test that the passed context is a DOM element
             if (!(document.querySelector(this.context).nodeType === 1)) {
-                throw {code: 1, obj: context, fatal: true};
+                throw { code: 1, obj: context, fatal: true };
             }
             // Test that all color codes are in fact decent hex values
             // regex for is between 000000 and FFFFFF
@@ -68,7 +71,7 @@ ${this.context} ${tag} {
             // Reduce the 5 pass/fails to a single must_be_all_true boolean
             let allHex = hexCheck.reduce((acc, val) => acc && val);
             if (!(this.colors.length === 5 && allHex)) {
-                throw {code: 2, fatal: true, obj: this.colors};
+                throw { code: 2, fatal: true, obj: this.colors };
             }
 
             // Test that the passed elemColoAssoc has at least the basics
@@ -78,7 +81,7 @@ ${this.context} ${tag} {
                 return ([0, 1, 2, 3, 4].indexOf(this.elemColorAssoc[elem]) === -1)
             });
             if (missingAssocs.length) {
-                throw {code: 3, fatal: true, obj: missingAssocs};
+                throw { code: 3, fatal: true, obj: missingAssocs };
             }
 
         } catch (err) {
@@ -108,7 +111,7 @@ ${this.context} ${tag} {
                 let exArg1 = "#main";
                 let exArg2 = JSON.stringify(this.defaultColorAssoc);
                 let exArg3 = JSON.stringify("3498DB", "000000", "000000", "000000",
-                        "FFFFFF");
+                    "FFFFFF");
                 console.info(`Usage: 
 new Recolor(
     // A queryable string like "body" or ".container"

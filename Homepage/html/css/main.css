@@ -1,94 +1,100 @@
 /* Imports for everything else */
 .colorscheme_main {
   /*
-  .customCollapse {
-      .collapser {
-
-      }
-      i {
-          color:$cs_main_green;
-      }
-  }
-  */
+    .customCollapse {
+        .collapser {
+            
+        }
+        i {
+            color:$cs_main_green;
+        }
+    }
+    */
   /*
-  // .{color} is foreground, .bg_{color} is background
-  .red {
-      color:$cs_main_red;
-  }
-  .bg_red {
-      background-color:$cs_main_red;
-  }
-  .blue {
-      color:$cs_main_blue;
-  }
-  .bg_blue {
-      background-color:$cs_main_blue;
-  }
-  .yellow {
-      color:$cs_main_yellow;
-  }
-  .bg_yellow {
-      background-color:$cs_main_yellow;
-  }
-  .orange {
-      color:$cs_main_orange;
-  }
-  .bg_orange {
-      background-color:$cs_main_orange;
-  }
-  .green {
-      color:$cs_main_green;
-  }
-  .bg_green {
-      background-color:$cs_main_green;
-  }
-  .violet {
-      color:$cs_main_violet;
-  }
-  .bg_violet {
-      background-color:$cs_main_violet;
-  }
-  .black {
-      color:$cs_main_black;
-  }
-  .bg_black {
-      background-color:$cs_main_black;
-  }
-  .brown {
-      color:$cs_main_brown;
-  }
-  .bg_brown {
-      background-color:$cs_main_brown;
-  }
-  .grey {
-      color:$cs_main_grey;
-  }
-  .bg_grey {
-      background-color:$cs_main_grey;
-  }
-  .white {
-      color:$cs_main_white;
-  }
-  .bg_white {
-      background-color:$cs_main_white;
-  }
-  */
+    // .{color} is foreground, .bg_{color} is background
+    .red {
+        color:$cs_main_red;
+    }
+    .bg_red {
+        background-color:$cs_main_red;
+    }
+    .blue {
+        color:$cs_main_blue;
+    }
+    .bg_blue {
+        background-color:$cs_main_blue;
+    }
+    .yellow {
+        color:$cs_main_yellow;
+    }
+    .bg_yellow {
+        background-color:$cs_main_yellow;
+    }
+    .orange {
+        color:$cs_main_orange;
+    }
+    .bg_orange {
+        background-color:$cs_main_orange;
+    }
+    .green {
+        color:$cs_main_green;
+    }
+    .bg_green {
+        background-color:$cs_main_green;
+    }
+    .violet {
+        color:$cs_main_violet;
+    }
+    .bg_violet {
+        background-color:$cs_main_violet;
+    }
+    .black {
+        color:$cs_main_black;
+    }
+    .bg_black {
+        background-color:$cs_main_black;
+    }
+    .brown {
+        color:$cs_main_brown;
+    }
+    .bg_brown {
+        background-color:$cs_main_brown;
+    }
+    .grey {
+        color:$cs_main_grey;
+    }
+    .bg_grey {
+        background-color:$cs_main_grey;
+    }
+    .white {
+        color:$cs_main_white;
+    }
+    .bg_white {
+        background-color:$cs_main_white;
+    }
+    */
 }
+
 .colorscheme_main .bg {
   background-color: #FFFFFF;
 }
+
 .colorscheme_main h1, .colorscheme_main h2 {
   color: #3498DB;
 }
+
 .colorscheme_main h3, .colorscheme_main h4, .colorscheme_main h5, .colorscheme_main h6 {
   color: #694D75;
 }
+
 .colorscheme_main p, .colorscheme_main span, .colorscheme_main li {
   color: #001021;
 }
+
 .colorscheme_main a, .colorscheme_main a:hover {
   color: #F6F7EB;
 }
+
 .colorscheme_main hr {
   border-color: #000000;
 }
@@ -98,22 +104,31 @@
   height: 100%;
   width: 100%;
 }
+
 .transformCenterCont .transformCenter {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .flexCenterCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
+
 .flexCenterCont .flexCenter {
-  flex: none;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 /* Vendor, and base html element styles */
@@ -137,35 +152,42 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
   min-width: 135px;
   margin: 8px;
 }
+
 .customCollapse .collapser {
   display: inline-block;
   border: 1px solid black;
   text-align: center;
   margin-bottom: 15px;
   /*
-          I want the plus/minus and title to the vertically centered in div AS WELL as vertically centered with eachother... Rather than coming up with some multi div table solution, so that the span and icon can be height changed responsively, I'll just fix height and manually calculate padding... I'm not a finiky designer, I'll  stick with the height...
-      */
+            I want the plus/minus and title to the vertically centered in div AS WELL as vertically centered with eachother... Rather than coming up with some multi div table solution, so that the span and icon can be height changed responsively, I'll just fix height and manually calculate padding... I'm not a finiky designer, I'll  stick with the height...
+        */
   padding: 7.5px;
 }
+
 .customCollapse .collapser:hover {
   text-decoration: none;
 }
+
 .customCollapse .collapser .title,
 .customCollapse .collapser i {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
 }
+
 .customCollapse .collapser i {
   /* Default none, so I don't have to double declare "hidden" with i.showOnCollapsed AND i.showOnExpanded */
   display: none;
 }
-.customCollapse .collapser[aria-expanded=true] i.showOnExpanded {
+
+.customCollapse .collapser[aria-expanded="true"] i.showOnExpanded {
   display: inline-block;
 }
-.customCollapse .collapser[aria-expanded=false] i.showOnCollapsed {
+
+.customCollapse .collapser[aria-expanded="false"] i.showOnCollapsed {
   display: inline-block;
 }
+
 /*
     underTheHood
 */
@@ -173,7 +195,9 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
   position: relative;
   width: 100%;
 }
+
 #underTheHood .ui-opener {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   margin-left: 0px;
   margin-top: -8px;
@@ -181,32 +205,45 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
   height: 30px;
   width: 30px;
   padding: 6px 8px;
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   cursor: hand;
   border: 1px solid black;
   border-radius: 50%;
 }
+
 #underTheHood .ui-bar {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   height: 30px;
   width: calc(100% - 60px);
   margin-left: 30px;
   padding-top: 4px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #underTheHood .ui-bar i {
   cursor: hand;
   margin: auto;
   display: inline-block;
 }
+
 #underTheHood.open .ui-opener {
   margin-left: calc(100% - 30px);
   margin-top: 0px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
+
 #underTheHood.closed .ui-bar {
   width: 0px;
 }
@@ -216,6 +253,7 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
   height: 30px;
   clear: both;
 }
+
 #colorPicker .track {
   background: #efefef url(../assets/tinycolorpicker.png) no-repeat 50% 50%;
   height: 150px;
@@ -225,20 +263,21 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
   float: left;
   display: none;
   z-index: 10;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
   border-radius: 150px;
 }
+
 #colorPicker .color {
   position: relative;
   display: block;
   z-index: 11;
   cursor: pointer;
 }
+
 #colorPicker .colorInner {
   width: 25px;
   height: 25px;
 }
+
 #colorPicker .dropdown {
   list-style: none;
   display: none;
@@ -249,6 +288,7 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
   left: 0;
   z-index: 1000;
 }
+
 #colorPicker .dropdown li {
   height: 25px;
   cursor: pointer;
@@ -262,11 +302,13 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
   height: 100%;
   width: 100%;
 }
+
 .transformCenterCont .transformCenter {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .halfhr {
@@ -289,5 +331,4 @@ Didn't like the bootstrap default collapse widget, I'm still using the behavior 
   height: 100%;
   z-index: -1;
 }
-
 /*# sourceMappingURL=main.css.map */

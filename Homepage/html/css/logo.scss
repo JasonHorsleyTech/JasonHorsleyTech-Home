@@ -1,0 +1,46 @@
+@keyframes hori-wipe-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.logo {
+  height:100%;
+  width:100%;
+  perspective: 1000px;
+  * {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: unset;
+  }
+  .name {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    & > * {
+      height: 100%;
+      position: absolute;
+      left: 0;
+    }
+    ._letters {
+    }
+    .wipe_cover {
+      overflow:hidden;
+      height:100%;
+      width:0%;
+      animation-name: hori-wipe-in;
+      animation-duration: 0.3s;
+      animation-timing-function: linear;
+      animation-delay: 0.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;  
+    }
+    ._flag {
+    }
+  }
+}
