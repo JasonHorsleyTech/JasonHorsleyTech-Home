@@ -45,7 +45,6 @@ ${this.context} ${tag} {
     ${propName}:#${hex}!important;
     border-color:#${hex}!important;
 }`;
-            console.log(tag + '-' + propName);
         }
         this.styleElem = styleElem;
     }

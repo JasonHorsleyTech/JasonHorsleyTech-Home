@@ -5,25 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "CodeLens (Launch) - TestRunner",
-            "request": "launch",
-            "mainClass": "main.TestRunner",
-            "projectName": "JasonHorsleyTech-Home_19973494"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - MyClass",
-            "request": "launch",
-            "mainClass": "MyClass"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - HelloWorld",
-            "request": "launch",
-            "mainClass": "HelloWorld"
-        },
-        {
             "type": "node",
             "request": "launch",
             "name": "Launch Program",

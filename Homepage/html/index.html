@@ -119,8 +119,25 @@
                 <h1 style="margin-left:15px; transform: translateY(-50%)" class="d-inline-block">Software Developer
                 </h1>
             </div>
-            <div class="col col-12 col-md-3 col-lg-6">
+            <!-- 
+                Style Hack explanation Need a min-height on col so when it's
+                col-12 there's at least 25 pixels to go with, since children are
+                abs positioned, the actual computed height won't get passed up)
+
+                Need the abs child to get a 100% height relative to the left
+                side block (logo and title). When they're both on same row.
+
+                Need the width calc(100% - 30) and left:15 to force the paddings
+                from parent, which won't get passed because, again, abs
+            -->
+            <div style="min-height:25px;" class="col col-12 col-md-3 col-lg-6">
                 <!-- Projects, Katas here-->
+                <div style="position:absolute; height:100%; width:calc(100% - 30px); left:15px">
+                    <div class="row h-100">
+                        <a class="col m-auto text-center" href="https://github.com/JasonHorsleyTech/Katas">Practice</a>
+                        <a class="col m-auto text-center" href="#projects">Projects</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -195,7 +212,7 @@
                 <p>Linux OS</p>
                 <p>Git</p>
                 <p>Asana</p>
-                <p>Services<br>(G-Suite, PostMark, PayPal, ect)</p>
+                <p>Service integration<br>(G-Suite, PostMark, PayPal, ect)</p>
             </div>
         </div>
 
@@ -207,7 +224,8 @@
             <p>Ported old Flash games to HTML5 using Construct2 for a McGraw Hill project. Worked in a small team, as
                 both a C2 developer, and bug tester for other team members.</p>
             <p>My work during this time focused on design and game maker engines, such as Construct2, GameMaker8 and
-                Cocos studio. I also regularly used Audacity, Illustrator and Photoshop.</p>
+                Cocos studio. I also regularly used Audacity, Illustrator, Photoshop; Generally anything needed to get
+                the job done.</p>
             <p>2011 - 2012</p>
         </div>
         <div class="container">
@@ -254,7 +272,7 @@
         </div> -->
 
         <hr>
-
+        <a name="projects"></a>
         <h2>Professional projects</h2>
         <div class="container">
             <p>The following are the professional projects I am able to show off.</p>
@@ -290,8 +308,10 @@
             </p>
             <p>
                 The website is a closed beta. You can preview the full system by registering with the promo code of
-                "GoPubbly".
+                "GoPubbly". Although the source is closed, I can at least show the MySQL design documents.
             </p>
+            <a href='projects/pubbly_market/db_design.zip'>MySQL design documents</a>
+            </br>
             <a href='https://pubbly.com/account_register.php?promo=GoPubbly'>Live site (promo code)</a>
         </div>
 
@@ -329,11 +349,11 @@
                     </p>
                     <p class="mb-1">
                         <span>Addr:</span>
-                        <span>5557 Dunloe Drive, Apt 104</span>
+                        <span>5557 Dunloe Drive #104</span>
                     </p>
                     <p class="mb-1">
                         <span class="invisible">Addr:</span>
-                        <span>Virginia Beach, VA. 23455</span>
+                        <span>Virginia Beach 23455</span>
                     </p>
                 </div>
             </div>
